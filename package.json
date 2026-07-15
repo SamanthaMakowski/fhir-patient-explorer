@@ -1,0 +1,16 @@
+{
+  "name": "fhir-patient-explorer",
+  "version": "0.1.0",
+  "description": "Web app that displays FHIR R4 patient data through an Express proxy",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "author": "Samantha Makowski",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
