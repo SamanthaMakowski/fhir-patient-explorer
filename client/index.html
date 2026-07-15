@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FHIR Patient Explorer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Patient Explorer</h1>
+    <div class="search">
+      <input type="text" id="patient-id-input" placeholder="Enter patient ID" />
+      <button id="search-btn">Search</button>
+    </div>
+  </header>
+
+  <main id="chart" class="chart hidden">
+    <section class="banner" id="banner"></section>
+
+    <div class="chart-body">
+      <nav class="sidebar">
+        <button class="nav-item active" data-section="demographics">Demographics</button>
+        <button class="nav-item" data-section="conditions">Conditions</button>
+        <button class="nav-item" data-section="medications">Medications</button>
+        <button class="nav-item" data-section="allergies">Allergies</button>
+      </nav>
+
+      <section class="panel" id="panel"></section>
+    </div>
+  </main>
+
+  <div id="message" class="message"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
