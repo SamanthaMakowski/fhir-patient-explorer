@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Environment variables (never commit real values)
+.env 
+
+# Logs
+*.log 
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+.vscode/
