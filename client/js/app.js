@@ -19,12 +19,19 @@ async function loadPatient(id) {
     currentPatientId = id;
     renderBanner(patient);
     renderDemographics(patient);
+    resetNav();
     chart.classList.remove("hidden");
     message.textContent = "";
   } catch (err) {
     chart.classList.add("hidden");
     message.textContent = `No patient found for ID "${id}".`;
   }
+}
+
+function resetNav() {
+  navItems.forEach((n) => n.classList.remove("active"));
+  const demographicsItem = document.querySelector('.nav-item[data-section="demographics"]');
+  if (demographicsItem) demographicsItem.classList.add("active");
 }
 
 function renderBanner(patient) {
